@@ -17,6 +17,7 @@ package com.example.android.miwok;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,21 +33,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Find the View that shows the numbers category
-        TextView numbers = (TextView) findViewById(R.id.numbers);
-
-        // Set a click listener on that View
+     TextView numbers = (TextView)findViewById(R.id.numbers);
+     // setting an onClick event listener
         numbers.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                Intent numberIntent = new Intent(MainActivity.this,NumbersActivity.class);
 
-                // Start the new activity
-                startActivity(numbersIntent);
+                // starting the number activity
+                startActivity(numberIntent);
             }
         });
-
         // Find the View that shows the family category
         TextView family = (TextView) findViewById(R.id.family);
 
